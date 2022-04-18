@@ -83,7 +83,7 @@ class FeaturesSplit extends React.Component {
                     imageFill && 'split-item-image-fill'
                   )}>
                   <Image
-                    src={require('./../../assets/images/features-split-image-01.svg')}
+                    src={require('./../../assets/images/dresser-01.svg')}
                     alt="Features split 01"
                     width={528}
                     height={396} />
@@ -105,7 +105,7 @@ class FeaturesSplit extends React.Component {
                     imageFill && 'split-item-image-fill'
                   )}>
                   <Image
-                    src={require('./../../assets/images/features-split-image-02.svg')}
+                    src={require('./../../assets/images/walker-01.svg')}
                     alt="Features split 02"
                     width={528}
                     height={396} />
@@ -127,7 +127,7 @@ class FeaturesSplit extends React.Component {
                     imageFill && 'split-item-image-fill'
                   )}>
                   <Image
-                    src={require('./../../assets/images/features-split-image-03.svg')}
+                    src={require('./../../assets/images/thinker-01.svg')}
                     alt="Features split 03"
                     width={528}
                     height={396} />
