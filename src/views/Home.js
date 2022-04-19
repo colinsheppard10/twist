@@ -3,7 +3,7 @@ import HeroSplit from '../components/sections/HeroSplit';
 import FeaturesSplit from '../components/sections/FeaturesSplit';
 import FeaturesTiles from '../components/sections/FeaturesTiles';
 import Pricing from '../components/sections/Pricing';
-import Cta from '../components/sections/Cta';
+import { Element } from 'react-scroll';
 
 class Home extends React.Component {
   render() {
@@ -12,8 +12,9 @@ class Home extends React.Component {
         <HeroSplit imageFill className="illustration-section-01" />
         <FeaturesTiles />
         <FeaturesSplit invertMobile imageFill className="illustration-section-05" />
-        <Pricing pricingSwitcher className="illustration-section-03" />
-        <Cta topDivider bottomDivider split />
+        <Element name='pricing'>
+          <Pricing pricingSwitcher={false} className="illustration-section-03" />
+        </Element>
       </React.Fragment>
     );
   }

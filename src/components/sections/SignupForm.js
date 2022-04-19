@@ -45,7 +45,7 @@ class SignupForm extends React.Component {
     );
 
     const sectionHeader = {
-      title: 'Welcome. We exist to make entrepreneurship easier.',
+      title: 'Hear about new products and updates with our newsletter.',
     };
 
     return (
@@ -63,8 +63,15 @@ class SignupForm extends React.Component {
                     <fieldset>
                       <div className="mb-12">
                         <Input
-                          label="Full name"
-                          placeholder="Full name" 
+                          label="First name"
+                          placeholder="First name" 
+                          labelHidden
+                          required />
+                      </div>
+                      <div className="mb-12">
+                        <Input
+                          label="Last name"
+                          placeholder="Last name" 
                           labelHidden
                           required />
                       </div>
@@ -76,24 +83,11 @@ class SignupForm extends React.Component {
                           labelHidden
                           required />
                       </div>
-                      <div className="mb-12">
-                        <Input
-                          type="password"
-                          label="Password"
-                          placeholder="Password"
-                          labelHidden
-                          required />
-                      </div>
                       <div className="mt-24 mb-32">
                         <Button color="primary" wide>Sign up</Button>
                       </div>
                     </fieldset>
                   </form>
-                  <div className="signin-bottom has-top-divider">
-                    <div className="pt-32 text-xs center-content text-color-low">
-                      Already have an account? <Link to="/login/" className="func-link">Login</Link>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

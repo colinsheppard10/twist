@@ -6,6 +6,8 @@ import SectionHeader from './partials/SectionHeader';
 import Switch from '../elements/Switch';
 import Button from '../elements/Button';
 import Image from '../elements/Image';
+import Modal from '../elements/Modal';
+import Input from '../elements/Input';
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -30,17 +32,15 @@ class Pricing extends React.Component {
     priceOutput: {
       plan1: {
         0: ["$", "55", "monthly"],
-        1: ["$", "47", "annually"]
+        1: ["$", "79.95", "annually"]
       },
       plan2: {
         0: ["$", "75", "monthly"],
-        1: ["$", "67", "annually"]
-      },
-      plan3: {
-        0: ["$", "109", "monthly"],
-        1: ["$", "97", "annually"]
-      }      
-    }
+        1: ["$", "99.95", "annually"]
+      }
+    },
+    demoModalActive: false,
+    userEmail: '',
   }
 
   slider = React.createRef();
@@ -54,6 +54,18 @@ class Pricing extends React.Component {
       this.handleSliderValuePosition(this.slider.current);
     }
   }
+
+  openModal = (e) => {
+    e.preventDefault();
+    this.setState({ demoModalActive: true });
+  }
+
+  closeModal = (e) => {
+    console.log(this.state.userEmail)
+    e.preventDefault();
+    this.setState({ demoModalActive: false });
+  }
+
 
   handlePricingSwitch = (e) => {
     this.setState({ priceChangerValue: e.target.checked ? '1' : '0' });
@@ -80,7 +92,7 @@ class Pricing extends React.Component {
     const {
       className,
       topOuterDivider,
-      bottomOuterDivider,      
+      bottomOuterDivider,
       topDivider,
       bottomDivider,
       hasBgColor,
@@ -112,7 +124,7 @@ class Pricing extends React.Component {
     );
 
     const sectionHeader = {
-      title: 'Simple pricing',
+      title: 'Our Products',
       paragraph: ''
     };
 
@@ -130,7 +142,7 @@ class Pricing extends React.Component {
                   checked={this.state.priceChangerValue === '1' ? true : false}
                   onChange={this.handlePricingSwitch}
                   rightLabel="Billed Annually">
-                    Billed Monthly
+                  Billed Monthly
                 </Switch>
               </div>
             }
@@ -149,9 +161,8 @@ class Pricing extends React.Component {
                   {this.getPricingData(this.state.priceInput)}
                 </div>
               </div>
-            }            
+            }
             <div className={tilesClasses}>
-
               <div className="tiles-item reveal-scale-up">
                 <div className="tiles-item-inner has-shadow">
                   <div className="pricing-item-content">
@@ -165,8 +176,9 @@ class Pricing extends React.Component {
                         </span>
                       </div>
                       <div className="text-color-low text-xs">
-                        /month, billed {this.getPricingData(this.state.priceOutput.plan1, 2)}
+                        CompassBelt - Model S
                       </div>
+                      <Image className="pricing-item-icon" src={require('./../../assets/images/pricing-icon.svg')} alt="Diamond" width={38} height={40} />
                     </div>
                     <div className="pricing-item-features mb-40">
                       <div className="pricing-item-features-title fw-500 text-xs text-color-high mb-24">
@@ -176,17 +188,15 @@ class Pricing extends React.Component {
                         <li className="is-checked">Excepteur sint occaecat velit</li>
                         <li className="is-checked">Excepteur sint occaecat velit</li>
                         <li className="is-checked">Excepteur sint occaecat velit</li>
-                        <li>Excepteur sint occaecat velit</li>
-                        <li>Excepteur sint occaecat velit</li>
+                        <li className="is-checked">Excepteur sint occaecat velit</li>
                       </ul>
                     </div>
                   </div>
                   <div className="pricing-item-cta mb-8">
-                    <Button tag="a" color="primary" wide href="http://cruip.com/">Start free trial</Button>
+                    <Button  onClick={this.openModal} color="primary" wide>Order Now</Button>
                   </div>
                 </div>
               </div>
-
               <div className="tiles-item reveal-scale-up" data-reveal-delay="200">
                 <div className="tiles-item-inner has-shadow">
                   <div className="pricing-item-content">
@@ -200,7 +210,7 @@ class Pricing extends React.Component {
                         </span>
                       </div>
                       <div className="text-color-low text-xs">
-                        /month, billed {this.getPricingData(this.state.priceOutput.plan2, 2)}
+                        CompassBelt - Model S Pro
                       </div>
                       <Image className="pricing-item-icon" src={require('./../../assets/images/pricing-icon.svg')} alt="Diamond" width={38} height={40} />
                     </div>
@@ -213,50 +223,54 @@ class Pricing extends React.Component {
                         <li className="is-checked">Excepteur sint occaecat velit</li>
                         <li className="is-checked">Excepteur sint occaecat velit</li>
                         <li className="is-checked">Excepteur sint occaecat velit</li>
-                        <li>Excepteur sint occaecat velit</li>
+                        <li className="is-checked">Excepteur sint occaecat velit</li>
+                        <li className="is-checked">Excepteur sint occaecat velit</li>
                       </ul>
                     </div>
                   </div>
                   <div className="pricing-item-cta mb-8">
-                    <Button tag="a" color="secondary" wide href="http://cruip.com/">Start free trial</Button>
+                    <Button  onClick={this.openModal} color="secondary" wide>Order Now</Button>
                   </div>
                 </div>
               </div>
 
-              <div className="tiles-item reveal-scale-up" data-reveal-delay="200">
-                <div className="tiles-item-inner has-shadow">
-                  <div className="pricing-item-content">
-                    <div className="pricing-item-header pb-16 mb-24">
-                      <div className="pricing-item-price mb-4">
-                        <span className="pricing-item-price-currency h2 text-color-low">
-                          {this.getPricingData(this.state.priceOutput.plan3, 0)}
-                        </span>
-                        <span className="pricing-item-price-amount h1">
-                          {this.getPricingData(this.state.priceOutput.plan3, 1)}
-                        </span>
-                      </div>
-                      <div className="text-color-low text-xs">
-                        /month, billed {this.getPricingData(this.state.priceOutput.plan3, 2)}
-                      </div>
-                    </div>
-                    <div className="pricing-item-features mb-40">
-                      <div className="pricing-item-features-title fw-500 text-xs text-color-high mb-24">
-                        What's included
-                      </div>
-                      <ul className="pricing-item-features-list list-reset text-xs mb-32">
-                        <li className="is-checked">Excepteur sint occaecat velit</li>
-                        <li className="is-checked">Excepteur sint occaecat velit</li>
-                        <li className="is-checked">Excepteur sint occaecat velit</li>
-                        <li className="is-checked">Excepteur sint occaecat velit</li>
-                        <li className="is-checked">Excepteur sint occaecat velit</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="pricing-item-cta mb-8">
-                    <Button tag="a" color="primary" wide href="http://cruip.com/">Start free trial</Button>
-                  </div>
+              <Modal
+                id="demo-modal"
+                show={this.state.demoModalActive}
+                handleClose={this.closeModal}
+              >
+                <div className="center-content">
+                  <Image
+                    className="mb-16"
+                    src={require('./../../assets/images/pricing-icon.svg')}
+                    alt="Diamond"
+                    width={53.2}
+                    height={56} />
+                  <h3 className="mt-0 mb-12">Join our waitlist</h3>
+                  <p className="text-sm">
+                    We are currently sold out. You may join our waitlist to receive a notification as soon as belts become available.
+                  </p>
                 </div>
-              </div>                            
+                <Input
+                  type="email"
+                  label="This is a label"
+                  placeholder="Your best email.."
+                  formGroup="desktop"
+                  onChange={e => this.setState({ userEmail: e.target.value })}
+                  labelHidden>
+                  <Button 
+                  onClick={this.closeModal}
+                  color="primary">Join Waitlist</Button>
+                </Input>
+                <div className="center-content mt-24">
+                  <a
+                    className="func-link text-xxs fw-500 tt-u"
+                    aria-label="close"
+                    href="#0"
+                    onClick={this.closeModal}
+                  >No thanks!</a>
+                </div>
+              </Modal>
 
             </div>
           </div>

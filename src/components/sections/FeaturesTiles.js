@@ -76,10 +76,10 @@ class FeaturesTiles extends React.Component {
                   </div>
                   <div className="features-tiles-item-content">
                     <h4 className="mt-0 mb-8 reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="100">
-                      Flexibility
+                      Confidence
                     </h4>
                     <p className="m-0 text-sm reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="200">
-                      A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design for previewing layouts.
+                    You think Don Draper asks for directions? “Umm excuse me do you know where…” NO!! He’s not a little bitch, he knows where he’s going.
                     </p>
                   </div>
                 </div>
@@ -98,10 +98,10 @@ class FeaturesTiles extends React.Component {
                   </div>
                   <div className="features-tiles-item-content">
                     <h4 className="mt-0 mb-8 reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="200">
-                      Flexibility
+                      Connected
                     </h4>
                     <p className="m-0 text-sm reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="300">
-                      A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design for previewing layouts.
+                      Get your face out of your phone. No more looking down at GoogleMaps. Know your city! Interact with your city!
                     </p>
                   </div>
                 </div>
@@ -120,80 +120,14 @@ class FeaturesTiles extends React.Component {
                   </div>
                   <div className="features-tiles-item-content">
                     <h4 className="mt-0 mb-8 reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="300">
-                      Flexibility
+                      Conicidence
                     </h4>
                     <p className="m-0 text-sm reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="400">
-                      A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design for previewing layouts.
+                      There is going to be a cute girl, and she is going to ask you for directions. Carpe this fucking diem!
                     </p>
                   </div>
                 </div>
-              </div>
-
-              <div className="tiles-item">
-                <div className="tiles-item-inner">
-                  <div className="features-tiles-item-header">
-                    <div className="features-tiles-item-image mb-12 reveal-from-right" data-reveal-container=".tiles-item">
-                      <Image
-                        src={require('./../../assets/images/feature-tile-icon-04.svg')}
-                        alt="Features tile icon 04"
-                        width={72}
-                        height={72} />
-                    </div>
-                  </div>
-                  <div className="features-tiles-item-content">
-                    <h4 className="mt-0 mb-8 reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="100">
-                      Flexibility
-                    </h4>
-                    <p className="m-0 text-sm reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="200">
-                      A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design for previewing layouts.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="tiles-item">
-                <div className="tiles-item-inner">
-                  <div className="features-tiles-item-header">
-                    <div className="features-tiles-item-image mb-12 reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="100">
-                      <Image
-                        src={require('./../../assets/images/feature-tile-icon-05.svg')}
-                        alt="Features tile icon 05"
-                        width={72}
-                        height={72} />
-                    </div>
-                  </div>
-                  <div className="features-tiles-item-content">
-                    <h4 className="mt-0 mb-8 reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="200">
-                      Flexibility
-                    </h4>
-                    <p className="m-0 text-sm reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="300">
-                      A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design for previewing layouts.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="tiles-item">
-                <div className="tiles-item-inner">
-                  <div className="features-tiles-item-header">
-                    <div className="features-tiles-item-image mb-12 reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="200">
-                      <Image
-                        src={require('./../../assets/images/feature-tile-icon-06.svg')}
-                        alt="Features tile icon 06"
-                        width={72}
-                        height={72} />
-                    </div>
-                  </div>
-                  <div className="features-tiles-item-content">
-                    <h4 className="mt-0 mb-8 reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="300">
-                      Flexibility
-                    </h4>
-                    <p className="m-0 text-sm reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="400">
-                      A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise design for previewing layouts.
-                    </p>
-                  </div>
-                </div>
-              </div>              
+              </div>           
 
             </div>
           </div>

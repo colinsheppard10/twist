@@ -71,10 +71,10 @@ class FeaturesSplit extends React.Component {
               <div className="split-item reveal-scale-up">
                 <div className="split-item-content center-content-mobile">
                   <h3 className="mt-0 mb-16">
-                    Lorem ipsum dolor sit
+                    Strap it on
                   </h3>
                   <p className="m-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Eight vibrating motors are build into the belt. The belt hides discreetly under your shirt.
                   </p>
                 </div>
                 <div className={
@@ -93,10 +93,10 @@ class FeaturesSplit extends React.Component {
               <div className="split-item reveal-scale-up">
                 <div className="split-item-content center-content-mobile">
                   <h3 className="mt-0 mb-16">
-                    Lorem ipsum dolor sit
+                    Train your brain
                   </h3>
                   <p className="m-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    As you walk around your city, the Compass Belt will vibrate in the direction of north. The same way a compass always points north.
                   </p>
                 </div>
                 <div className={
@@ -115,10 +115,10 @@ class FeaturesSplit extends React.Component {
               <div className="split-item reveal-scale-up">
                 <div className="split-item-content center-content-mobile">
                   <h3 className="mt-0 mb-16">
-                    Lorem ipsum dolor sit
+                    Know your way
                   </h3>
                   <p className="m-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  The belt speaks directly to your subconsious brain. You will build up a map of your city in your mind without even realizing.
                   </p>
                 </div>
                 <div className={
