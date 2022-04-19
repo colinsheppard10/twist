@@ -79,7 +79,7 @@ class FeaturesSplit extends React.Component {
                 </div>
                 <div className={
                   classNames(
-                    'split-item-image is-3d illustration-element-03',
+                    'is-3d illustration-element-03',
                     imageFill && 'split-item-image-fill'
                   )}>
                   <Image
@@ -101,7 +101,7 @@ class FeaturesSplit extends React.Component {
                 </div>
                 <div className={
                   classNames(
-                    'split-item-image is-3d illustration-element-04',
+                    'is-3d illustration-element-04',
                     imageFill && 'split-item-image-fill'
                   )}>
                   <Image
@@ -123,7 +123,7 @@ class FeaturesSplit extends React.Component {
                 </div>
                 <div className={
                   classNames(
-                    'split-item-image is-3d illustration-element-05',
+                    'is-3d illustration-element-05',
                     imageFill && 'split-item-image-fill'
                   )}>
                   <Image
