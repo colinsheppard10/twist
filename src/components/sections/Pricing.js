@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import axios from 'axios';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Switch from '../elements/Switch';
@@ -60,10 +61,11 @@ class Pricing extends React.Component {
     this.setState({ demoModalActive: true });
   }
 
-  closeModal = (e) => {
-    console.log(this.state.userEmail)
+  closeModal = async (e) => {
     e.preventDefault();
     this.setState({ demoModalActive: false });
+    if(this.state.userEmail )
+      await axios.post('/api/user', { "user": {"email": this.state.userEmail }})
   }
 
 

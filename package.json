@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.26.1",
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
     "node-sass": "^4.12.0",
@@ -33,5 +34,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "http://ec2-100-24-98-167.compute-1.amazonaws.com:3050/",
   "devDependencies": {}
 }
+
