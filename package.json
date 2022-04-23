@@ -34,7 +34,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://ec2-100-24-98-167.compute-1.amazonaws.com:3050/",
+  "proxy": "http://ec2-44-197-184-149.compute-1.amazonaws.com:3050/",
   "devDependencies": {}
 }
 
